@@ -12,8 +12,6 @@ RUN mkdir -p /opt/test/; touch /opt/test/initial-data-file
 
 VOLUME /opt/test
 
-COPY data-volume.tar.gz entrypoint /opt/
-
 EXPOSE 80
 
 ENTRYPOINT ["/opt/entrypoint"]
