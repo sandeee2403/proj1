@@ -18,4 +18,4 @@ VOLUME ["proj1"]
 EXPOSE 80
 
 # the Default command and the Command to start the app in our container
-CMD ["usr/sbin/apachectl", "-D", "FOREGROUND"]
+CMD ["usr/sbin/httpd", "-D", "FOREGROUND"]
