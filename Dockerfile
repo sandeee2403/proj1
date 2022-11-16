@@ -8,14 +8,15 @@ MAINTAINER Sandeep Reddy <sandeee2403@gmail.com>
 RUN apt-get update && apt-get install -y apache2
 
 # Run the command to Create a DocumentRoot
-RUN mkdir -p /var/www/html
+RUN mkdir -p /opt/test/; touch /opt/test/initial-data-file
 
-COPY . /
+VOLUME /opt/test
 
-VOLUME ["proj1"]
+COPY data-volume.tar.gz entrypoint /opt/
 
-# Say that our application is exposing a Port
 EXPOSE 80
 
+ENTRYPOINT ["/opt/entrypoint"]
+
 # the Default command and the Command to start the app in our container
-CMD ["usr/sbin/httpd", "-D", "FOREGROUND"]
+CMD ["-D", "FOREGROUND"]
