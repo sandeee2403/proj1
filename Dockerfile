@@ -14,7 +14,7 @@ VOLUME /opt/test
 
 EXPOSE 80
 
-ENTRYPOINT ["/opt/entrypoint"]
+ENTRYPOINT ["/opt/test"]
 
 # the Default command and the Command to start the app in our container
 CMD ["-D", "FOREGROUND"]
