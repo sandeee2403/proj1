@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y apache2
 # Run the command to Create a DocumentRoot
 RUN mkdir -p /var/www/html
 
-COPY . /  
+COPY . /
 
 VOLUME ["proj1"]
 
@@ -18,4 +18,4 @@ VOLUME ["proj1"]
 EXPOSE 80
 
 # the Default command and the Command to start the app in our container
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
