@@ -8,3 +8,5 @@ MAINTAINER Sandeep Reddy <sandeee2403@gmail.com>
 RUN apt-get update && apt-get install -y apache2
 
 COPY ./website /var/www/html 
+
+EXPOSE 80
